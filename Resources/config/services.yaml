@@ -1,0 +1,13 @@
+services:
+    netbull_hashids.hashids:
+        class: 'Hashids\Hashids'
+        public: true
+
+    NetBull\HashidsBundle\Request\ParamConverter\HashParamConverter:
+        arguments: ['@netbull_hashids.hashids']
+        tags: [{ name: request.param_converter, priority: 2, converter: hash }]
+
+    netbull_hashids.twig.hashids_extension:
+        class: 'NetBull\HashidsBundle\Twig\HashidsExtension'
+        arguments: ['@netbull_hashids.hashids']
+        tags: [{ name: twig.extension }]
