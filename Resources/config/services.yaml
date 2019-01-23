@@ -1,6 +1,7 @@
 services:
     netbull_hashids.hashids:
         class: 'Hashids\Hashids'
+        arguments: ["%netbull_hashids.salt%", "%netbull_hashids.min_hash_length%", "%netbull_hashids.alphabet%"]
         public: true
 
     NetBull\HashidsBundle\Request\ParamConverter\HashParamConverter:

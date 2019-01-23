@@ -22,7 +22,6 @@ class NetBullHashidsExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.yaml');
 
         // set parameters with the default settings so they'll be available in the service definition yml
         $varNames = ['salt', 'min_hash_length', 'alphabet'];
@@ -31,6 +30,8 @@ class NetBullHashidsExtension extends Extension
                 $container->setParameter('netbull_hashids.' . $varName, $config[$varName]);
             }
         }
+
+        $loader->load('services.yaml');
     }
 
     /**
