@@ -21,7 +21,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('salt')->defaultNull()->end()
+                ->scalarNode('salt')->defaultValue('%kernel.secret%')->end()
                 ->scalarNode('min_hash_length')->defaultValue(0)->end()
                 ->scalarNode('alphabet')->defaultValue('')->end()
             ->end()
