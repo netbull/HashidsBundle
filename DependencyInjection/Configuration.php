@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('salt')->defaultValue('%kernel.secret%')->end()
                 ->scalarNode('min_hash_length')->defaultValue(0)->end()
-                ->scalarNode('alphabet')->defaultValue('')->end()
+                ->scalarNode('alphabet')->defaultValue('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890')->end()
             ->end()
         ;
 
