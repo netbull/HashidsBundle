@@ -4,7 +4,7 @@ namespace NetBull\HashidsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-use NetBull\CoreBundle\DependencyInjection\NetBullHashidsExtension;
+use NetBull\HashidsBundle\DependencyInjection\NetBullHashidsExtension;
 
 /**
  * Class NetBullHashidsBundle
