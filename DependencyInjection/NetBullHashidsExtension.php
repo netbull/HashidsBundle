@@ -25,10 +25,8 @@ class NetBullHashidsExtension extends Extension
 
         // set parameters with the default settings so they'll be available in the service definition yml
         $varNames = ['salt', 'min_hash_length', 'alphabet'];
-        if (!empty($config['form_types']) && !empty($config['form_types']['ajax'])) {
-            foreach($varNames as $varName) {
-                $container->setParameter('netbull_hashids.' . $varName, $config[$varName]);
-            }
+        foreach($varNames as $varName) {
+            $container->setParameter('netbull_hashids.' . $varName, $config[$varName]);
         }
 
         $loader->load('services.yaml');
