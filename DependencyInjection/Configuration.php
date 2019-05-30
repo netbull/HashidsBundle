@@ -16,8 +16,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('netbull_core');
+        $treeBuilder = new TreeBuilder('netbull_hashids');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
             ->children()
