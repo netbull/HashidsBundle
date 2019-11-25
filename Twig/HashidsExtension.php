@@ -3,12 +3,14 @@
 namespace NetBull\HashidsBundle\Twig;
 
 use Hashids\Hashids;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
 /**
  * Class HashidsExtension
  * @package NetBull\HashidsBundle\Twig
  */
-class HashidsExtension extends \Twig_Extension
+class HashidsExtension extends AbstractExtension
 {
     /**
      * @var Hashids
@@ -30,8 +32,8 @@ class HashidsExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('hashid_encode', [$this, 'encode']),
-            new \Twig_SimpleFilter('hashid_decode', [$this, 'decode']),
+            new TwigFilter('hashid_encode', [$this, 'encode']),
+            new TwigFilter('hashid_decode', [$this, 'decode']),
         ];
     }
 
