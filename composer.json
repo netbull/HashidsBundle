@@ -1,25 +1,27 @@
 {
-  "name" : "netbull/hashids-bundle",
-  "description" : "Hashids bundle",
-  "type" : "symfony-bundle",
-  "authors" : [{
-    "name" : "Aleksandar Dimitrov",
-    "email" : "netbull2007@gmail.com"
-  }],
-  "keywords" : [
-    "netbull hashids symfony bundle"
-  ],
-  "license" : "AGPL-3.0-or-later",
-  "require" : {
-    "hashids/hashids": "^3.0",
-    "symfony/templating": "5.0.*",
-    "symfony/framework-bundle": "5.0.*",
-    "sensio/framework-extra-bundle": "^5.2",
-    "symfony/orm-pack": "^1.0"
-  },
-  "autoload" : {
-    "psr-4" : {
-      "NetBull\\HashidsBundle\\" : ""
+    "name": "netbull/hashids-bundle",
+    "description": "Hashids bundle",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Aleksandar Dimitrov",
+            "email": "netbull2007@gmail.com"
+        }
+    ],
+    "keywords": [
+        "netbull hashids symfony bundle"
+    ],
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "hashids/hashids": "^3.0",
+        "symfony/templating": "5.0.*",
+        "symfony/framework-bundle": "5.0.*",
+        "sensio/framework-extra-bundle": "^5.2",
+        "symfony/orm-pack": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NetBull\\HashidsBundle\\": ""
+        }
     }
-  }
 }
