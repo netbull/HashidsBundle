@@ -35,7 +35,7 @@ class HashParamConverter implements ParamConverterInterface
         $hash = $request->attributes->get('hash');
         if ($hash) {
             $decoded = $this->hashids->decode($hash);
-            $request->attributes->set('hash', $decoded[0] ?? null);
+            $request->attributes->set('hash', $decoded[0] ?? $hash);
         }
 
         return true;
