@@ -17,11 +17,11 @@
         "symfony/templating": "5.0.*",
         "symfony/framework-bundle": "5.0.*",
         "sensio/framework-extra-bundle": "^5.2",
-        "symfony/orm-pack": "^1.0"
+        "symfony/orm-pack": "2.*"
     },
     "autoload": {
         "psr-4": {
-            "NetBull\\HashidsBundle\\": ""
+            "NetBull\\HashidsBundle\\": "src/"
         }
     }
 }
