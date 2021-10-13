@@ -32,12 +32,12 @@ class HashParamConverter implements ParamConverterInterface
      */
     public function apply(Request $request, ParamConverter $configuration)
     {
-        $hash = $request->attributes->get('hash');
+        $hash = $request->attributes->get($configuration->getName());
         if ($hash) {
             $decoded = $this->hashids->decode($hash);
-            $request->attributes->set('hash', $decoded[0] ?? $hash);
+            $request->attributes->set($configuration->getName(), $decoded[0] ?? $hash);
         }
-
+		
         return true;
     }
 
@@ -46,6 +46,6 @@ class HashParamConverter implements ParamConverterInterface
      */
     public function supports(ParamConverter $configuration)
     {
-        return 'hash' === $configuration->getName();
+        return false !== strpos(strtolower($configuration->getName()), 'hash');
     }
 }
