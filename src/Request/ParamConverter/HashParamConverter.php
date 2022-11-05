@@ -33,10 +33,13 @@ class HashParamConverter implements ParamConverterInterface
     public function apply(Request $request, ParamConverter $configuration)
     {
         $hash = $request->attributes->get($configuration->getName());
-        if ($hash) {
+        if ($hash && $hash !== 'null') {
             $decoded = $this->hashids->decode($hash);
             $request->attributes->set($configuration->getName(), $decoded[0] ?? $hash);
         }
+	if ($hash && $hash === 'null') {
+	    $request->attributes->set($configuration->getName(), null);
+	}
 		
         return true;
     }
