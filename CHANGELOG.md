@@ -1,3 +1,10 @@
+## [5.4.6](https://github.com/netbull/HashidsBundle/compare/v5.4.5...v5.4.6) (2023-01-17)
+
+
+### Bug Fixes
+
+* bring back the PC temporary ([f5cf102](https://github.com/netbull/HashidsBundle/commit/f5cf102cd4408b4b1509d4ca96026240b93fff91))
+
 ## [5.4.5](https://github.com/netbull/HashidsBundle/compare/v5.4.4...v5.4.5) (2023-01-17)
 
 
