@@ -1,3 +1,11 @@
+## [5.4.5](https://github.com/netbull/HashidsBundle/compare/v5.4.4...v5.4.5) (2023-01-17)
+
+
+### Bug Fixes
+
+* bump node version ([665f601](https://github.com/netbull/HashidsBundle/commit/665f601ac6f5a3b17028aade58a21292825c68e4))
+* removed deprecated dependency ([3b0fda2](https://github.com/netbull/HashidsBundle/commit/3b0fda2a0d4ab8ffbdb1851febe92aa166365c26))
+
 ## [5.4.4](https://github.com/netbull/HashidsBundle/compare/v5.4.3...v5.4.4) (2022-11-05)
 
 
