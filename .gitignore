@@ -1,1 +1,4 @@
 release.sh
+composer.lock
+vendor
+.idea

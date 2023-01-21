@@ -5,16 +5,12 @@ namespace NetBull\HashidsBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
-/**
- * Class Configuration
- * @package NetBull\HashidsBundle\DependencyInjection
- */
 class Configuration implements ConfigurationInterface
 {
     /**
-     * {@inheritdoc}
+     * @return TreeBuilder
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('netbull_hashids');
         $rootNode = $treeBuilder->getRootNode();
@@ -24,8 +20,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('salt')->defaultValue('%kernel.secret%')->end()
                 ->scalarNode('min_hash_length')->defaultValue(0)->end()
                 ->scalarNode('alphabet')->defaultValue('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890')->end()
-            ->end()
-        ;
+            ->end();
 
         return $treeBuilder;
     }

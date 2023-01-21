@@ -2,20 +2,13 @@
 
 namespace NetBull\HashidsBundle;
 
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-
 use NetBull\HashidsBundle\DependencyInjection\NetBullHashidsExtension;
 
-/**
- * Class NetBullHashidsBundle
- * @package NetBull\HashidsBundle
- */
 class NetBullHashidsBundle extends Bundle
 {
-    /**
-     * @return NetBullHashidsExtension|null|\Symfony\Component\DependencyInjection\Extension\ExtensionInterface
-     */
-    public function getContainerExtension()
+    public function getContainerExtension(): ?ExtensionInterface
     {
         return new NetBullHashidsExtension();
     }

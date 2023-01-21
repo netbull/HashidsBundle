@@ -6,19 +6,14 @@ use Hashids\Hashids;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
-/**
- * Class HashidsExtension
- * @package NetBull\HashidsBundle\Twig
- */
 class HashidsExtension extends AbstractExtension
 {
     /**
      * @var Hashids
      */
-    private $hashids;
+    private Hashids $hashids;
 
     /**
-     * HashidsExtension constructor.
      * @param Hashids $hashids
      */
     public function __construct(Hashids $hashids)
@@ -27,9 +22,9 @@ class HashidsExtension extends AbstractExtension
     }
 
     /**
-     * @inheritdoc
+     * @return TwigFilter[]
      */
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new TwigFilter('hashid_encode', [$this, 'encode']),
@@ -41,7 +36,7 @@ class HashidsExtension extends AbstractExtension
      * @param $number
      * @return string
      */
-    public function encode($number)
+    public function encode($number): string
     {
         return $this->hashids->encode($number);
     }
@@ -50,7 +45,7 @@ class HashidsExtension extends AbstractExtension
      * @param $hash
      * @return array
      */
-    public function decode($hash)
+    public function decode($hash): array
     {
         return $this->hashids->decode($hash);
     }
@@ -58,7 +53,7 @@ class HashidsExtension extends AbstractExtension
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return 'netbull_hashids.extension';
     }
