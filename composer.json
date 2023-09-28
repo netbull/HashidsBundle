@@ -13,9 +13,9 @@
     ],
     "license": "AGPL-3.0-or-later",
     "require": {
-        "hashids/hashids": "3.*|4.*",
-        "symfony/templating": "5.2.*|5.3.*|5.4.*",
-        "symfony/framework-bundle": "5.2.*|5.3.*|5.4.*",
+        "hashids/hashids": "4.*",
+        "symfony/templating": "6.3.*",
+        "symfony/framework-bundle": "6.3.*",
         "sensio/framework-extra-bundle": "^5.2|^6.1",
         "symfony/orm-pack": "2.*"
     },
