@@ -1,3 +1,18 @@
+# [6.0.0](https://github.com/netbull/HashidsBundle/compare/v5.4.7...v6.0.0) (2023-09-28)
+
+
+### Performance Improvements
+
+* **pencil:** bump versions ([4861a09](https://github.com/netbull/HashidsBundle/commit/4861a0905fc5e56c615fe0960229a79a14038dca))
+* **pencil:** bump versions ([eb1ebf7](https://github.com/netbull/HashidsBundle/commit/eb1ebf7e29f885b2456207e562de7eefebcfca6a))
+* **pencil:** bump versions ([dcdb9f8](https://github.com/netbull/HashidsBundle/commit/dcdb9f847d4a0762d8a08653441438f3478cdc16))
+
+
+### BREAKING CHANGES
+
+* **pencil:** bump to Symfony 6.3
+* **pencil:** bump to Symfony 6.3
+
 ## [5.4.7](https://github.com/netbull/HashidsBundle/compare/v5.4.6...v5.4.7) (2023-01-21)
 
 
