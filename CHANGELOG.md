@@ -1,3 +1,10 @@
+## [5.4.7](https://github.com/netbull/HashidsBundle/compare/v5.4.6...v5.4.7) (2023-01-21)
+
+
+### Bug Fixes
+
+* clean deprecations ([43af70d](https://github.com/netbull/HashidsBundle/commit/43af70d8bc43f99c5b523d6f56f5e392d0c7f8ed))
+
 ## [5.4.6](https://github.com/netbull/HashidsBundle/compare/v5.4.5...v5.4.6) (2023-01-17)
 
 
