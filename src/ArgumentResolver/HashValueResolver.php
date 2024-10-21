@@ -24,7 +24,7 @@ final class HashValueResolver implements ValueResolverInterface
     /**
      * @param Request $request
      * @param ArgumentMetadata $argument
-     * @return array|false[]|iterable[]|null[]|object[]
+     * @return array
      */
     public function resolve(Request $request, ArgumentMetadata $argument): array
     {
@@ -38,8 +38,11 @@ final class HashValueResolver implements ValueResolverInterface
         if ($options->disabled) {
             return [];
         }
+        if (!$hash = $this->getHash($request, $options, $argument)) {
+            return [];
+        }
 
-        $decoded = $this->hashids->decode($this->getHash($request, $options, $argument));
+        $decoded = $this->hashids->decode($hash);
 
         if (empty($decoded) && !$argument->isNullable()) {
             throw new NotFoundHttpException($options->message ?? (sprintf('"%s" The hash could not be converted "%s".', $options->class, self::class)));

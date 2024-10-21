@@ -1,19 +1,16 @@
 services:
-    netbull_hashids.hashids:
-        class: 'Hashids\Hashids'
-        arguments: ["%netbull_hashids.salt%", "%netbull_hashids.min_hash_length%", "%netbull_hashids.alphabet%"]
+    Hashids\Hashids:
+        arguments: [ "%netbull_hashids.salt%", "%netbull_hashids.min_hash_length%", "%netbull_hashids.alphabet%" ]
         public: true
 
-    Hashids\Hashids:
-        alias: 'netbull_hashids.hashids'
-
-    netbull_hashids.twig.hashids_extension:
-        class: 'NetBull\HashidsBundle\Twig\HashidsExtension'
-        arguments: ['@netbull_hashids.hashids']
-        tags: [{ name: twig.extension }]
+    NetBull\HashidsBundle\Twig\HashidsExtension:
+        arguments: [ '@Hashids\Hashids' ]
+        tags:
+            - twig.extension
 
     NetBull\HashidsBundle\ArgumentResolver\HashValueResolver:
+        arguments: [ '@Hashids\Hashids' ]
         tags:
             - controller.argument_value_resolver:
-                  name: hashid
+                  name: NetBull\HashidsBundle\ArgumentResolver\HashValueResolver
                   priority: 150
