@@ -33,19 +33,19 @@ class HashidsExtension extends AbstractExtension
     }
 
     /**
-     * @param $number
+     * @param mixed $number
      * @return string
      */
-    public function encode($number): string
+    public function encode(mixed $number): string
     {
         return $this->hashids->encode($number);
     }
 
     /**
-     * @param $hash
+     * @param string $hash
      * @return array
      */
-    public function decode($hash): array
+    public function decode(string $hash): array
     {
         return $this->hashids->decode($hash);
     }

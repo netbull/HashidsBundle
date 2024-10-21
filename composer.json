@@ -13,10 +13,10 @@
     ],
     "license": "AGPL-3.0-or-later",
     "require": {
-        "hashids/hashids": "4.*|5.*",
+        "php": "^8.2",
+        "hashids/hashids": "5.*",
         "symfony/templating": "6.4.*",
         "symfony/framework-bundle": "6.4.*",
-        "sensio/framework-extra-bundle": "^5.2|^6.1",
         "symfony/orm-pack": "2.*"
     },
     "autoload": {
