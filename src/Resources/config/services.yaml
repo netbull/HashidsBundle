@@ -11,3 +11,9 @@ services:
         class: 'NetBull\HashidsBundle\Twig\HashidsExtension'
         arguments: ['@netbull_hashids.hashids']
         tags: [{ name: twig.extension }]
+
+    NetBull\HashidsBundle\ArgumentResolver\HashValueResolver:
+        tags:
+            - controller.argument_value_resolver:
+                  name: hashid
+                  priority: 150
