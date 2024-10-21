@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/netbull/HashidsBundle/compare/v6.0.0...v6.1.0) (2024-10-21)
+
+
+### Features
+
+* bump symfony versions ([5cce533](https://github.com/netbull/HashidsBundle/commit/5cce533f073b9c12e0cb432bccf2e7ba488ef7d6))
+
 # [6.0.0](https://github.com/netbull/HashidsBundle/compare/v5.4.7...v6.0.0) (2023-09-28)
 
 
