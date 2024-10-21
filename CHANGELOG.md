@@ -1,3 +1,10 @@
+## [6.4.2](https://github.com/netbull/HashidsBundle/compare/v6.4.1...v6.4.2) (2024-10-21)
+
+
+### Bug Fixes
+
+* service definition ([f5d7606](https://github.com/netbull/HashidsBundle/commit/f5d7606a3412e60c8e72afd6d71befc3e0d29df7))
+
 ## [6.4.1](https://github.com/netbull/HashidsBundle/compare/v6.4.0...v6.4.1) (2024-10-21)
 
 
