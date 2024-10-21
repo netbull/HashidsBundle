@@ -47,6 +47,9 @@ final class HashValueResolver implements ValueResolverInterface
         if (empty($decoded) && !$argument->isNullable()) {
             throw new NotFoundHttpException($options->message ?? (sprintf('"%s" The hash could not be converted "%s".', $options->class, self::class)));
         }
+        if (empty($decoded)) {
+            $decoded = [null];
+        }
 
         return $decoded;
     }
