@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/netbull/HashidsBundle/compare/v6.1.0...v6.1.1) (2024-10-21)
+
+
+### Bug Fixes
+
+* update hashids version ([28590da](https://github.com/netbull/HashidsBundle/commit/28590daacf22d840cdcf03d6188e6b27c368de6b))
+
 # [6.1.0](https://github.com/netbull/HashidsBundle/compare/v6.0.0...v6.1.0) (2024-10-21)
 
 
