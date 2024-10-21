@@ -1,3 +1,10 @@
+# [6.4.0](https://github.com/netbull/HashidsBundle/compare/v6.3.0...v6.4.0) (2024-10-21)
+
+
+### Features
+
+* PHP attributes ([739ae6a](https://github.com/netbull/HashidsBundle/commit/739ae6a27e28ed3b0060685525944ef4c890b49e))
+
 ## [6.1.1](https://github.com/netbull/HashidsBundle/compare/v6.1.0...v6.1.1) (2024-10-21)
 
 
