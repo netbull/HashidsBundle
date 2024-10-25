@@ -9,7 +9,7 @@ services:
             - twig.extension
 
     NetBull\HashidsBundle\ArgumentResolver\HashValueResolver:
-        arguments: [ '@Hashids\Hashids' ]
+        arguments: [ '@Hashids\Hashids', '%netbull_hashids.min_hash_length%' ]
         tags:
             - controller.argument_value_resolver:
                   name: NetBull\HashidsBundle\ArgumentResolver\HashValueResolver

@@ -13,11 +13,11 @@ final class HashValueResolver implements ValueResolverInterface
 {
     /**
      * @param Hashids|null $hashids
-     * @param HashId $defaults
+     * @param int $minHashLength
      */
     public function __construct(
         private ?Hashids $hashids = null,
-        private HashId $defaults = new HashId(),
+        private int $minHashLength = 0
     ) {
     }
 
@@ -28,30 +28,25 @@ final class HashValueResolver implements ValueResolverInterface
      */
     public function resolve(Request $request, ArgumentMetadata $argument): array
     {
-        if (\is_object($request->attributes->get($argument->getName()))) {
+        if (!$options = $argument->getAttributesOfType(HashId::class, ArgumentMetadata::IS_INSTANCEOF)) {
             return [];
         }
 
-        $options = $argument->getAttributes(HashId::class, ArgumentMetadata::IS_INSTANCEOF);
-        $options = ($options[0] ?? $this->defaults)->withDefaults($this->defaults);
+        $options = $options[0];
 
-        if ($options->disabled) {
-            return [];
-        }
-        if (!$hash = $this->getHash($request, $options, $argument)) {
+        if ($options->disabled || !($hash = $this->getHash($request, $options, $argument)) || strlen($hash) < $this->minHashLength) {
             return [];
         }
 
-        $decoded = $this->hashids->decode($hash);
-
-        if (empty($decoded) && !$argument->isNullable()) {
-            throw new NotFoundHttpException($options->message ?? (sprintf('"%s" The hash could not be converted "%s".', $options->class, self::class)));
-        }
-        if (empty($decoded)) {
-            $decoded = [null];
+        if ($decoded = $this->hashids->decode($hash)) {
+            return $decoded;
         }
 
-        return $decoded;
+        if ($argument->isNullable()) {
+            return [null];
+        }
+
+        throw new NotFoundHttpException($options->message ?? (sprintf('The hash could not be converted "%s".', self::class)));
     }
 
     /**
@@ -83,7 +78,7 @@ final class HashValueResolver implements ValueResolverInterface
         $name = $argument->getName();
 
         if ($request->attributes->has($name)) {
-            if (\is_array($id = $request->attributes->get($name))) {
+            if (is_array($id = $request->attributes->get($name))) {
                 return false;
             }
 
