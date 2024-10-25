@@ -1,3 +1,10 @@
+## [6.4.4](https://github.com/netbull/HashidsBundle/compare/v6.4.3...v6.4.4) (2024-10-25)
+
+
+### Bug Fixes
+
+* resolver ([45019ab](https://github.com/netbull/HashidsBundle/commit/45019abf611ee24b07d8c770c93ab865c099e888))
+
 ## [6.4.3](https://github.com/netbull/HashidsBundle/compare/v6.4.2...v6.4.3) (2024-10-21)
 
 
