@@ -1,3 +1,15 @@
+# [7.0.0](https://github.com/netbull/HashidsBundle/compare/v6.4.4...v7.0.0) (2025-05-22)
+
+
+### chore
+
+* bump versions ([91b4958](https://github.com/netbull/HashidsBundle/commit/91b49581ac378802a2877ed287be0a1e3d010a9e))
+
+
+### BREAKING CHANGES
+
+* bump versions
+
 ## [6.4.4](https://github.com/netbull/HashidsBundle/compare/v6.4.3...v6.4.4) (2024-10-25)
 
 
