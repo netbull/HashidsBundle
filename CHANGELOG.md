@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/netbull/HashidsBundle/compare/v7.0.0...v7.0.1) (2025-05-22)
+
+
+### Bug Fixes
+
+* symfony/templating ([d3c7d13](https://github.com/netbull/HashidsBundle/commit/d3c7d13a7d4b4a9c72e9c62191c4fb9e1d126a50))
+
 # [7.0.0](https://github.com/netbull/HashidsBundle/compare/v6.4.4...v7.0.0) (2025-05-22)
 
 
