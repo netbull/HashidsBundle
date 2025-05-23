@@ -1,3 +1,10 @@
+## [7.0.2](https://github.com/netbull/HashidsBundle/compare/v7.0.1...v7.0.2) (2025-05-23)
+
+
+### Bug Fixes
+
+* dependency ([04f7fe7](https://github.com/netbull/HashidsBundle/commit/04f7fe77b5d65b1604eb11d451342e3720c8a6df))
+
 ## [7.0.1](https://github.com/netbull/HashidsBundle/compare/v7.0.0...v7.0.1) (2025-05-22)
 
 
