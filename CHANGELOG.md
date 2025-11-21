@@ -1,3 +1,10 @@
+## [7.0.3](https://github.com/netbull/HashidsBundle/compare/v7.0.2...v7.0.3) (2025-11-21)
+
+
+### Bug Fixes
+
+* allow versions ([bb1f751](https://github.com/netbull/HashidsBundle/commit/bb1f751528d33f37f544313303276f380a3bc7b2))
+
 ## [7.0.2](https://github.com/netbull/HashidsBundle/compare/v7.0.1...v7.0.2) (2025-05-23)
 
 
